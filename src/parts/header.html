@@ -1,0 +1,35 @@
+<header class="site-header" data-header>
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="index.html" aria-label="株式会社RISE トップページ">
+      <img src="assets/img/logo-horizontal.png" alt="株式会社RISE" width="1084" height="381">
+    </a>
+    <nav class="global-nav" aria-label="グローバルナビゲーション">
+      <ul class="global-nav__list">
+        <li><a href="index.html" data-nav="home"><span class="en">TOP</span><span class="ja">トップ</span></a></li>
+        <li><a href="company.html" data-nav="company"><span class="en">COMPANY</span><span class="ja">会社案内</span></a></li>
+        <li><a href="service.html" data-nav="service"><span class="en">SERVICE</span><span class="ja">事業内容</span></a></li>
+        <li><a href="works.html" data-nav="works"><span class="en">WORKS</span><span class="ja">施工実績</span></a></li>
+      </ul>
+      <a class="btn btn--gradient btn--sm global-nav__cta" href="contact.html" data-nav="contact"><span>お問い合わせ</span></a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="drawer" data-menu-toggle>
+      <span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span>
+      <span class="visually-hidden">メニューを開く</span>
+    </button>
+  </div>
+  <div class="drawer" id="drawer" data-drawer>
+    <nav aria-label="モバイルナビゲーション">
+      <ul class="drawer__list">
+        <li><a href="index.html" data-nav="home"><span class="en">TOP</span><span class="ja">トップ</span></a></li>
+        <li><a href="company.html" data-nav="company"><span class="en">COMPANY</span><span class="ja">会社案内</span></a></li>
+        <li><a href="service.html" data-nav="service"><span class="en">SERVICE</span><span class="ja">事業内容</span></a></li>
+        <li><a href="works.html" data-nav="works"><span class="en">WORKS</span><span class="ja">施工実績</span></a></li>
+        <li><a href="contact.html" data-nav="contact"><span class="en">CONTACT</span><span class="ja">お問い合わせ</span></a></li>
+      </ul>
+    </nav>
+    <div class="drawer__info">
+      <p class="drawer__tel"><span class="label">TEL/FAX</span>{{company.tel}}</p>
+      <p>{{company.address}}</p>
+    </div>
+  </div>
+</header>

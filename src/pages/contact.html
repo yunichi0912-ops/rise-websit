@@ -1,0 +1,81 @@
+<!--meta {"title":"お問い合わせ","description":"株式会社RISEへのお問い合わせ。工事のご相談・お見積りはお電話またはフォームからお気軽にどうぞ。","page":"contact"} -->
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="page-hero__bg" aria-hidden="true"><img src="assets/img/photo/page-header.jpg" alt="" width="1600" height="900"></div>
+  <div class="container page-hero__inner">
+    <p class="page-hero__en" aria-hidden="true">CONTACT</p>
+    <h1 class="page-hero__title" id="page-title">お問い合わせ</h1>
+    <ol class="breadcrumb" aria-label="パンくずリスト"><li><a href="index.html">TOP</a></li><li aria-current="page">お問い合わせ</li></ol>
+  </div>
+</section>
+
+<section class="section contact" aria-labelledby="contact-title">
+  <div class="container contact__grid">
+    <div class="contact__info">
+      <p class="section-label" data-reveal><span>CONTACT</span></p>
+      <h2 class="section-title" id="contact-title" data-reveal>工事のご相談・<br>お見積りはこちら</h2>
+      <p class="contact__lead" data-reveal>元請け企業様・協力会社様からのご依頼、個人のお客様からのご相談まで、お気軽にお問い合わせください。内容を確認のうえ、担当者よりご連絡いたします。</p>
+      <div class="contact-tel" data-reveal>
+        <p class="contact-tel__label">お電話でのお問い合わせ</p>
+        <a class="contact-tel__num" href="#" data-demo-action="tel" role="button"><span class="contact-tel__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span>{{company.tel}}</a>
+        <p class="contact-tel__note">TEL/FAX兼用｜受付時間（サンプル）平日 8:00〜18:00</p>
+      </div>
+      <div class="demo-alert" data-reveal role="note">
+        <p class="demo-alert__title">デモサイトについて</p>
+        <p>このページは提案用デモです。フォームの送信・電話の発信は行われません。入力内容はどこにも保存・送信されません。</p>
+      </div>
+    </div>
+    <form class="contact-form" data-demo-form novalidate aria-describedby="form-note" data-reveal>
+      <p id="form-note" class="contact-form__note"><span class="req">必須</span>は必須項目です</p>
+      <fieldset class="field">
+        <legend class="field__label">お問い合わせ種別 <span class="req">必須</span></legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="type" value="estimate" checked><span>お見積り依頼</span></label>
+          <label class="choice"><input type="radio" name="type" value="partner"><span>協力会社・取引のご相談</span></label>
+          <label class="choice"><input type="radio" name="type" value="recruit"><span>採用について</span></label>
+          <label class="choice"><input type="radio" name="type" value="other"><span>その他</span></label>
+        </div>
+      </fieldset>
+      <div class="field-row">
+        <div class="field">
+          <label class="field__label" for="f-company">会社名</label>
+          <input class="field__input" id="f-company" name="company" type="text" autocomplete="organization" placeholder="例）株式会社〇〇建設">
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-name">お名前 <span class="req">必須</span></label>
+          <input class="field__input" id="f-name" name="name" type="text" autocomplete="name" required placeholder="例）山田 太郎">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label class="field__label" for="f-email">メールアドレス <span class="req">必須</span></label>
+          <input class="field__input" id="f-email" name="email" type="email" autocomplete="email" required placeholder="例）info@example.com">
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-tel">電話番号</label>
+          <input class="field__input" id="f-tel" name="tel" type="tel" autocomplete="tel" placeholder="例）000-0000-0000">
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label" for="f-service">ご相談内容</label>
+        <div class="select">
+          <select class="field__input" id="f-service" name="service">
+            <option value="">選択してください</option>
+            <option>土木工事業</option>
+            <option>タイル・レンガ・ブロック工事業</option>
+            <option>ハウスクリーニング業</option>
+            <option>とび・土工・コンクリート工事業</option>
+            <option>清掃管理業</option>
+            <option>その他</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label" for="f-message">お問い合わせ内容 <span class="req">必須</span></label>
+        <textarea class="field__input" id="f-message" name="message" rows="6" required placeholder="工事内容、場所、ご希望の時期などをご記入ください"></textarea>
+      </div>
+      <label class="agree"><input type="checkbox" name="agree" required><span>プライバシーポリシーに同意する <span class="req">必須</span></span></label>
+      <button class="btn btn--gradient btn--block" type="submit"><span>入力内容を確認する</span><i class="btn__arrow" aria-hidden="true"></i></button>
+      <p class="contact-form__demo">※デモのため送信されません</p>
+    </form>
+  </div>
+</section>

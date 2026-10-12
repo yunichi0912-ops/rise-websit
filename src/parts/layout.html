@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+{{> head}}
+</head>
+<body class="page-{{page}}">
+<a class="skip-link" href="#main">本文へスキップ</a>
+<div class="page-transition" aria-hidden="true"><img src="assets/img/logo-mark.png" alt="" width="120" height="80"></div>
+{{> demo-banner}}
+{{> header}}
+<main id="main">
+{{> body}}
+</main>
+{{> footer}}
+{{> demo-modal}}
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

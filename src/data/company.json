@@ -1,0 +1,22 @@
+{
+  "_note": "会社情報の一元管理ファイル。display:false の項目はデモ公開時に出力されません（WordPress化の際はカスタマイザー/サイト設定へ移行予定）。",
+  "name": { "value": "株式会社RISE", "display": true },
+  "nameEn": { "value": "RISE Co., Ltd.", "display": true },
+  "representative": { "value": "川上 雅弥", "display": true },
+  "representativeTitle": { "value": "代表取締役", "display": true },
+  "representativeEn": { "value": "Masaya Kawakami", "display": true },
+  "zip": { "value": "808-0131", "display": true },
+  "address": { "value": "福岡県北九州市若松区塩屋1丁目11-10", "display": true },
+  "tel": { "value": "093-233-8772", "display": true, "note": "会社代表（TEL/FAX兼用）。デモでは発信リンクを無効化" },
+  "fax": { "value": "093-233-8772", "display": true },
+  "mobile": { "value": "", "display": false, "note": "個人携帯。公開リポジトリのため値は保存していません（正式公開時に必要なら追記）" },
+  "email": { "value": "", "display": false, "note": "個人アドレス。公開リポジトリのため値は保存していません（正式公開時に必要なら追記）" },
+  "established": { "value": "確認中", "display": true },
+  "capital": { "value": "確認中", "display": true },
+  "employees": { "value": "確認中", "display": true },
+  "license": { "value": "確認中", "display": true },
+  "business": {
+    "value": ["土木工事業", "タイル・レンガ・ブロック工事業", "ハウスクリーニング業", "とび・土工・コンクリート工事業", "清掃管理業"],
+    "display": true
+  }
+}

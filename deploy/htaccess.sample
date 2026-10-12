@@ -1,0 +1,13 @@
+# ===== エックスサーバー等（Apache）でのBasic認証設定サンプル =====
+# 1) このファイルを公開ディレクトリに「.htaccess」という名前で設置
+# 2) AuthUserFile はサーバー上の .htpasswd の「絶対パス」に変更
+#    （エックスサーバーは サーバーパネル >「アクセス制限」から GUI でも設定可能）
+AuthType Basic
+AuthName "RISE Demo - Authorized Only"
+AuthUserFile /home/ACCOUNT/DOMAIN/htpasswd/demo/.htpasswd
+Require valid-user
+
+# 検索エンジンへの非掲載を徹底
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow, noarchive"
+</IfModule>

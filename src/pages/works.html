@@ -1,0 +1,27 @@
+<!--meta {"title":"施工実績","description":"株式会社RISEの施工実績（デモ用サンプル）。土木工事、外構工事、ブロック・タイル工事、とび工事などの事例をご紹介します。","page":"works"} -->
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="page-hero__bg" aria-hidden="true"><img src="assets/img/photo/works-02.jpg" alt="" width="1200" height="900"></div>
+  <div class="container page-hero__inner">
+    <p class="page-hero__en" aria-hidden="true">WORKS</p>
+    <h1 class="page-hero__title" id="page-title">施工実績</h1>
+    <ol class="breadcrumb" aria-label="パンくずリスト"><li><a href="index.html">TOP</a></li><li aria-current="page">施工実績</li></ol>
+  </div>
+</section>
+
+<section class="section works works--archive" aria-labelledby="works-list-title">
+  <div class="container">
+    <h2 class="visually-hidden" id="works-list-title">施工実績一覧</h2>
+    <p class="sample-banner sample-banner--wide" data-reveal><strong>SAMPLE</strong>このページに掲載している施工実績は、デザイン確認用の<b>架空のサンプル</b>です。写真はイメージ、工事件名・場所・施工内容はすべて実在しません。</p>
+    <div class="works-filter" role="group" aria-label="カテゴリーで絞り込み" data-works-filter>
+      <button type="button" class="is-active" aria-pressed="true" data-filter="all">すべて</button>
+      <button type="button" aria-pressed="false" data-filter="civil">土木工事</button>
+      <button type="button" aria-pressed="false" data-filter="exterior">外構工事</button>
+      <button type="button" aria-pressed="false" data-filter="block">タイル・ブロック</button>
+      <button type="button" aria-pressed="false" data-filter="tobi">とび・土工</button>
+    </div>
+    {{> works-cards}}
+    <p class="works-empty" hidden data-works-empty>該当する実績はまだありません。</p>
+  </div>
+</section>
+
+{{> contact-cta}}
