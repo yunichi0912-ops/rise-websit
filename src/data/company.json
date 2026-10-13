@@ -1,5 +1,5 @@
 {
-  "_note": "会社情報の一元管理ファイル。display:false の項目はデモ公開時に出力されません（WordPress化の際はカスタマイザー/サイト設定へ移行予定）。",
+  "_note": "会社情報の一元管理ファイル。display:false の項目はデモ公開時に「デモ非表示」と出力されます（WordPress化の際はカスタマイザー/サイト設定へ移行予定）。",
   "name": { "value": "株式会社RISE", "display": true },
   "nameEn": { "value": "RISE Co., Ltd.", "display": true },
   "representative": { "value": "川上 雅弥", "display": true },
@@ -7,8 +7,8 @@
   "representativeEn": { "value": "Masaya Kawakami", "display": true },
   "zip": { "value": "808-0131", "display": true },
   "address": { "value": "福岡県北九州市若松区塩屋1丁目11-10", "display": true },
-  "tel": { "value": "093-233-8772", "display": true, "note": "会社代表（TEL/FAX兼用）。デモでは発信リンクを無効化" },
-  "fax": { "value": "093-233-8772", "display": true },
+  "tel": { "value": "093-233-8772", "display": false, "note": "会社代表（TEL/FAX兼用）。一般公開のデモでは非表示。表示する場合は display を true に" },
+  "fax": { "value": "093-233-8772", "display": false },
   "mobile": { "value": "", "display": false, "note": "個人携帯。公開リポジトリのため値は保存していません（正式公開時に必要なら追記）" },
   "email": { "value": "", "display": false, "note": "個人アドレス。公開リポジトリのため値は保存していません（正式公開時に必要なら追記）" },
   "established": { "value": "確認中", "display": true },

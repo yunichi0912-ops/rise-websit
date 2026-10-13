@@ -1,0 +1,7 @@
+# Cloudflare Pages 用のレスポンスヘッダー設定
+# 提案用デモのため、検索エンジンに載せない・他サイトへの埋め込みを防ぐ
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff

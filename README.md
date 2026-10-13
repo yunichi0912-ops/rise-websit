@@ -46,7 +46,7 @@ deploy/htaccess.sample  Basic認証の設定例
 ## よく変更する箇所
 
 - **会社情報**：`src/data/company.json`。設立・資本金・従業員数・許可番号は現在「確認中」です。
-  個人の携帯番号・メールアドレスはデータとして保持していますが `display:false` のため表示されません。
+  個人の携帯番号・メールアドレスは公開リポジトリのため値を保存していません。電話番号は `display:false` でデモでは非表示です。
 - **紹介文・事業説明・理念**：`src/pages/*.html`（すべてサンプル文です）
 - **施工実績の追加**：`src/parts/works-cards.html` の `<li class="work-card">` を複製して差し替え
 - **写真**：`assets/img/photo/` の同名ファイルを実際の現場写真に差し替え（推奨サイズは現ファイルと同じ）。
@@ -71,6 +71,20 @@ deploy/htaccess.sample  Basic認証の設定例
 | Netlify（パスワード保護） | サイト全体のパスワード保護は有料プラン | △ |
 
 ※GitHub Pages ではパスワード保護ができないため、デモの公開先には向きません。
+
+## Cloudflare Pages でのデモ公開（ログイン不要）
+
+| 設定項目 | 値 |
+| --- | --- |
+| リポジトリ | `yunichi0912-ops/rise-websit` |
+| 本番ブランチ | `claude/rise-company-website-qjy7gw` |
+| フレームワーク | なし（None） |
+| ビルドコマンド | `node build.mjs` |
+| ビルド出力ディレクトリ | `dist` |
+
+- `node build.mjs` で、公開用ファイル（HTML・assets・robots.txt・_headers）だけを集めた `dist/` を作ります。
+- `_headers` で `X-Robots-Tag: noindex` を返し、検索エンジンに載らないようにしています。
+- 一般公開のデモでは会社の電話番号も「デモ非表示」にしています（`src/data/company.json` の `tel` / `fax` の `display`）。
 
 ## WordPress（ブロックテーマ）への移行方針
 

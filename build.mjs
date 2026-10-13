@@ -2,7 +2,7 @@
 // src/parts/*.html（共通パーツ）と src/pages/*.html（各ページ）を組み立て、ルートに出力します。
 // WordPressブロックテーマの parts/ ・ templates/ と同じ考え方の構成です。
 //   node build.mjs
-import { readFileSync, writeFileSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync, rmSync, mkdirSync, cpSync } from "node:fs";
 import { join } from "node:path";
 
 const SRC = "src";
@@ -14,7 +14,7 @@ const fillCompany = (html) =>
   html.replace(/\{\{company\.(\w+)\}\}/g, (_, key) => {
     const item = company[key];
     if (!item) throw new Error(`company.${key} is not defined`);
-    if (!item.display) return "（非公開）";
+    if (!item.display) return "デモ非表示";
     return Array.isArray(item.value) ? item.value.join("／") : item.value;
   });
 
@@ -43,3 +43,12 @@ for (const file of readdirSync(join(SRC, "pages")).filter((f) => f.endsWith(".ht
   writeFileSync(file, html);
   console.log("built", file);
 }
+
+// 公開用フォルダ dist/ を作成（Cloudflare Pages の出力先）
+// src・tools・README などの制作用ファイルは含めない
+const DIST = "dist";
+rmSync(DIST, { recursive: true, force: true });
+mkdirSync(DIST);
+for (const f of readdirSync(".").filter((f) => f.endsWith(".html"))) cpSync(f, join(DIST, f));
+for (const f of ["assets", "robots.txt", "_headers"]) cpSync(f, join(DIST, f), { recursive: true });
+console.log("dist/ ready");
